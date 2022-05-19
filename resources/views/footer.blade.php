@@ -34,10 +34,10 @@
       </div>
 
       <div class="col-2">
-        <h5>Kontak Kami</h5>
+        <h5>KONTAK KAMI</h5>
         <ul class="nav flex-column">
             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"></a>
-            <p>Telefon: (0341)571032</p>
+            <p>Telepon: (0341)571032</p>
             <p>Fax: +62-341-565420</p>
             <p>Web: http://lib.ub.ac.id</p>
             <p>Email: library@ub.ac.id</p>
