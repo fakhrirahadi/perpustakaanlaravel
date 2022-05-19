@@ -1,9 +1,16 @@
+<style>
+    .nav-link {
+        font-weight: bolder;
+        
+    }
+</style>
+
 <div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div>
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="/home">Home</a>
+                    <a class="nav-link" href="/">Home</a>
                 </li>
 
                 <li class="nav-item">
