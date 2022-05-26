@@ -29,9 +29,10 @@
                      <a class="nav-link" href="/pinjam">Data Peminjaman</a> 
                  </li>
 
-                 <li class="nav-item">
+                 {{-- Tidak digunakan --}}
+                 {{-- <li class="nav-item">
                     <a class="nav-link" href="/logout">Logout</a>
-                 </li>
+                 </li> --}}
             </ul>
         </div>
     </nav>            

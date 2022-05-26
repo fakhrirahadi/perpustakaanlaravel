@@ -23,7 +23,7 @@
 
 <footer class="py-5">
     <div class="row justify-content-center" style="text-align: center;">
-      <div class="col-2">
+      <div class="col-4">
         <h5>ALAMAT LOKASI</h5>
         <ul class="nav flex-column">
             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"></a>
@@ -33,7 +33,7 @@
         </ul>
       </div>
 
-      <div class="col-2">
+      <div class="col-4">
         <h5>KONTAK KAMI</h5>
         <ul class="nav flex-column">
             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"></a>
@@ -45,7 +45,7 @@
         </ul>
       </div>
 
-      <div class="col-2">
+      <div class="col-4">
         <h5>JAM OPERASIONAL PERPUSTAKAAN</h5>
         <ul class="nav flex-column">
           <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"></a>
