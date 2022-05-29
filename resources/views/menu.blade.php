@@ -5,10 +5,10 @@
     }
 </style>
 
-<div>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+<div style="position: sticky; top:0; box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgb(40,49,56)"  >
         <div>
-            <ul class="navbar-nav">
+            <ul class="navbar-nav ms-5">
                 <li class="nav-item">
                     <a class="nav-link" href="/">Home</a>
                 </li>

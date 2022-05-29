@@ -12,7 +12,7 @@ class BukuController extends Controller
     //method untuk tampil data buku
     public function bukutampil()
     {
-        $databuku = BukuModel::orderby('kodebuku', 'ASC')
+        $databuku = BukuModel::orderby('idbuku', 'ASC')
         ->paginate(5);
 
         return view('halaman/view_buku',['buku'=>$databuku]);

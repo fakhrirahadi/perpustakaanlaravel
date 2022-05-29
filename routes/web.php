@@ -17,24 +17,45 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
+// Route / dan route home
 Route::get('/', function () {
-    return view('index');
+    return view('halaman/view_home');
 });
+
+// // Route Home
+// Route::get('/home', function(){
+//     return view('home');
+// });
 
 //Route untuk Data Buku
 Route::get('/buku', 'BukuController@bukutampil');
 
 //Route untuk Data Siswa
-Route::get('/siswa', 'SiswaController@bukutampil');
+Route::get('/siswa', 'SiswaController@siswatampil');
 
 //Route untuk Data Petugas
-Route::get('/petugas', 'PetugasController@bukutampil');
+Route::get('/petugas', 'PetugasController@petugastampil');
+
+// Route Petugas Tambah
+Route::post('/petugas/tambah', 'PetugasController@petugastambah');
+
+// Route Petugas Edit
+Route::put('/petugas/edit/{idpetugas}', 'PetugasController@petugasedit');
+
+// Route Petugas Hapus DELETE
+Route::get('/petugas/hapus/{idpetugas}', 'PetugasController@petugashapus');
 
 //Route untuk Data Peminjaman
 Route::get('/peminjaman', 'PeminjamanController@bukutampil');
 
 // Oleh karena itu selanjutnya kita buatkan route baru pada routes/web.php
 Route::post('/buku/tambah','BukuController@bukutambah');
+
+// SISWA TAMBAH
+Route::post('/siswa/tambah','SiswaController@siswatambah');
+
+// SISWA HAPUS
+Route::get('/siswa/hapus/{idsiswa}','SiswaController@siswahapus');
 
 // Selanjutnya kita buatkan route baru pada routes/web.php
 Route::get('/buku/hapus/{idbuku}','BukuController@bukuhapus');

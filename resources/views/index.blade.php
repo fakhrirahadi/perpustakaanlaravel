@@ -13,7 +13,8 @@
     </head>
 
     <body>
-        <div class="container" style="background:#ccc">
+        {{-- Container Utama --}}
+        <div class="container" style="background:#ccc;">
                 @include('menu')
                 @include('banner')
                 @include('sidebar')

@@ -1,9 +1,10 @@
 @extends('index')
-@section('title', 'Buku')
+@section('title', 'Pinjam')
 
 @section('isihalaman')
     <h3><center>Data Peminjaman Buku</center><h3>
     <h3><center>Perpustakaan</center></h3>
+    <hr>
 
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalPinjamTambah"> 
         Tambah Data Peminjaman 
@@ -24,6 +25,7 @@
 
         <tbody>
             @foreach ($pinjam as $index=>$p)
+            {{-- Tabel Peminjaman --}}
                 <tr>
                     <td align="center" scope="row">{{ $index + $pinjam->firstItem() }}</td>
                     <td align="center">{{$p->idpinjam}}</td>
@@ -106,7 +108,7 @@
                         <p>
                         <div class="modal-footer">
                             <button type="button" name="tutup" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
-                            <button type="submit" name="pinjamtambah" class="btn btn-success">Tambah</button>
+                            <button type="submit" name="pinjamtambah" class="btn btn-primary">Tambah</button>
                         </div>
                     </form>
                 </div>
@@ -115,6 +117,7 @@
     </div>
     <!-- Akhir Modal tambah data Peminjaman -->
 
+    @foreach ($pinjam as $index=>$p)
     <!-- Awal Modal EDIT data Peminjaman -->
     <div class="modal fade" id="modalPinjamEdit{{$p->idpinjam}}" tabindex="-1" role="dialog" aria-labelledby="modalPinjamEditLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -185,7 +188,7 @@
                         <p>
                         <div class="modal-footer">
                             <button type="button" name="tutup" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
-                            <button type="submit" name="pinjamtambah" class="btn btn-success">Edit</button>
+                            <button type="submit" name="pinjamtambah" class="btn btn-primary">Edit</button>
                         </div>
                     </form>
                 </div>
@@ -193,5 +196,6 @@
         </div>
     </div>
     <!-- Akhir Modal EDIT data Peminjaman -->
+    @endforeach
 
 @endsection
