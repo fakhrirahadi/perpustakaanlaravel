@@ -32,7 +32,7 @@ Route::get('/buku', 'BukuController@bukutampil');
 Route::post('/buku/tambah','BukuController@bukutambah');    
 Route::put('/buku/edit/{idbuku}', 'BukuController@bukuedit');
 Route::get('/buku/hapus/{idbuku}','BukuController@bukuhapus');
-
+// test
 //ROUTE SISWA
 Route::get('/siswa', 'SiswaController@siswatampil');
 Route::post('/siswa/tambah','SiswaController@siswatambah');
