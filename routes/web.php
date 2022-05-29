@@ -28,13 +28,23 @@ Route::get('/buku', 'BukuController@bukutampil');
 Route::get('/siswa', 'SiswaController@siswatampil');
 
 //Route untuk Data Petugas
-Route::get('/petugas', 'PetugasController@bukutampil');
+Route::get('/petugas', 'PetugasController@petugastampil');
 
 //Route untuk Data Peminjaman
 Route::get('/peminjaman', 'PeminjamanController@bukutampil');
 
 // Oleh karena itu selanjutnya kita buatkan route baru pada routes/web.php
 Route::post('/buku/tambah','BukuController@bukutambah');
+Route::post('/petugas/tambah','PetugasController@petugastambah');
+Route::post('/siswa/tambah','SiswaController@siswatambah');
+
+// Selanjutnya kita buatkan route baru pada routes/web.php
+Route::get('/buku/hapus/{idbuku}','BukuController@bukuhapus');
+Route::get('/petugas/hapus/{idpetugas}','PetugasController@petugashapus');
+
+// Oleh karena itu selanjutnya kita buatkan route baru pada routes/web.php
+Route::put('/buku/edit/{idbuku}', 'BukuController@bukuedit');
+Route::put('/petugas/edit/{idpetugas}', 'PetugasController@petugasedit');
 Route::post('/siswa/tambah','SiswaController@siswatambah');
 
 // Selanjutnya kita buatkan route baru pada routes/web.php
