@@ -114,6 +114,13 @@
                         <div class="form-group row">
                             <label for="idpetugas" class="col-sm-4 col-form-label">Nama Petugas</label>
                             <div class="col-sm-8">
+                                <input type="text" class="form-control" id="namapetugas" name="namapetugas" value="{{ $pt->namapetugas}}">
+                            </div>
+                        </div>
+                        <p>
+                        <div class="form-group row">
+                            <label for="hp" class="col-sm-4 col-form-label">No Hp</label>
+                            <div class="col-sm-8">
                                 <input type="text" class="form-control" id="hp" name="hp" value="{{ $pt->hp}}">
                             </div>
                         </div>
