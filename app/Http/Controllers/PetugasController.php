@@ -12,7 +12,7 @@ class PetugasController extends Controller
     //method untuk tampil data petugas
     public function petugastampil()
     {
-        $datapetugas = PetugasModel::orderby('namapetugas', 'ASC')
+        $datapetugas = PetugasModel::orderby('idpetugas', 'ASC')
         ->paginate(5);
 
         return view('halaman/view_petugas',['petugas'=>$datapetugas]);
@@ -22,13 +22,11 @@ class PetugasController extends Controller
     public function petugastambah(Request $request)
     {
         $this->validate($request, [
-            'idpetugas' => 'required',
             'namapetugas' => 'required',
             'hp' => 'required'
         ]);
 
         PetugasModel::create([
-            'idpetugas' => $request->idpetugas,
             'namapetugas' => $request->namapetugas,
             'hp' => $request->hp,
         ]);
@@ -49,7 +47,6 @@ class PetugasController extends Controller
     public function petugasedit($idpetugas, Request $request)
     {
         $this->validate($request, [
-            'idpetugas' => 'required',
             'namapetugas' => 'required',
             'hp' => 'required',
         ]);

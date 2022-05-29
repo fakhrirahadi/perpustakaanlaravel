@@ -69,15 +69,7 @@
                     <form name="formpetugastambah" id="formpetugastambah" action="/petugas/tambah " method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group row">
-                            <label for="idpetugas" class="col-sm-4 col-form-label">ID Petugas</label>
-                            <div class="col-sm-8">
-                                <input type="text" class="form-control" id="idpetugas" name="idpetugas" placeholder="Masukkan ID Petugas">
-                            </div>
-                        </div>
-
-                        <p>
-                        <div class="form-group row">
-                            <label for="judul" class="col-sm-4 col-form-label">Nama Petugas</label>
+                            <label for="idpetugas" class="col-sm-4 col-form-label">Nama Petugas</label>
                             <div class="col-sm-8">
                                 <input type="text" class="form-control" id="namapetugas" name="namapetugas" placeholder="Masukkan Nama Petugas">
                             </div>
@@ -116,14 +108,7 @@
                         @csrf
                         {{ method_field('PUT') }}
                         <div class="form-group row">
-                            <label for="idpetugas" class="col-sm-4 col-form-label">ID Petugas</label>
-                            <div class="col-sm-8">
-                                <input type="text" class="form-control" id="idpetugas" name="idpetugas" value="{{ $ptg->idpetugas}}">
-                            </div>
-                        </div>
-                        <p>
-                        <div class="form-group row">
-                            <label for="namapetugas" class="col-sm-4 col-form-label">Nama Petugas</label>
+                            <label for="idpetugas" class="col-sm-4 col-form-label">Nama Petugas</label>
                             <div class="col-sm-8">
                                 <input type="text" class="form-control" id="namapetugas" name="namapetugas" value="{{ $ptg->namapetugas}}">
                             </div>
