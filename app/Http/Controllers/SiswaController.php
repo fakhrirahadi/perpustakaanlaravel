@@ -12,7 +12,7 @@ class SiswaController extends Controller
     //method untuk tampil data siswa
     public function siswatampil()
     {
-        $datasiswa = SiswaModel::orderby('nis', 'ASC')
+        $datasiswa = SiswaModel::orderby('idsiswa', 'ASC')
         ->paginate(5);
 
         return view('halaman/view_siswa',['siswa'=>$datasiswa]);
