@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-//panggil model PetugasModel
+//panggil model BukuModel
 use App\Models\PetugasModel;
 
 class PetugasController extends Controller
@@ -28,7 +28,7 @@ class PetugasController extends Controller
 
         PetugasModel::create([
             'namapetugas' => $request->namapetugas,
-            'hp' => $request->hp,
+            'hp' => $request->hp
         ]);
 
         return redirect('/petugas');
@@ -48,12 +48,11 @@ class PetugasController extends Controller
     {
         $this->validate($request, [
             'namapetugas' => 'required',
-            'hp' => 'required',
+            'hp' => 'required'
         ]);
         $idpetugas = PetugasModel::find($idpetugas);
-        $idpetugas->idpetugas   = $request->idpetugas;
-        $idpetugas->namapetugas      = $request->namapetugas;
-        $idpetugas->hp  = $request->hp;
+        $idpetugas->namapetugas   = $request->namapetugas;
+        $idpetugas->hp      = $request->hp;
         $idpetugas->save();
         return redirect()->back();
     }

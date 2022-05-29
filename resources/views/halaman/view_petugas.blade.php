@@ -1,8 +1,9 @@
 @extends('index')
-@section('title', 'petugas')
+@section('title', 'Petugas')
 
 @section('isihalaman')
-    <h3><center>Daftar Petugas Perpustakaan</center></h3>
+    <h3><center>Daftar Petugas</center></h3>
+    <hr>
 
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalPetugasTambah"> 
         Tambah Data Petugas 
@@ -15,18 +16,18 @@
                 <td align="center">No</td>
                 <td align="center">ID Petugas</td>
                 <td align="center">Nama Petugas</td>
-                <td align="center">No HP</td>
-
+                <td align="center">No Hp</td>
+                <td align="center">Aksi</td>
             </tr>
         </thead>
 
         <tbody>
-            @foreach ($petugas as $index=>$ptg)
+            @foreach ($petugas as $index=>$pt)
                 <tr>
                     <td align="center" scope="row">{{ $index + $petugas->firstItem() }}</td>
-                    <td>{{$ptg->idpetugas}}</td>
-                    <td>{{$ptg->namapetugas}}</td>
-                    <td>{{$ptg->hp}}</td>
+                    <td>{{$pt->idpetugas}}</td>
+                    <td>{{$pt->namapetugas}}</td>
+                    <td>{{$pt->hp}}</td>
                     <td align="center">
                         
                         <!-- <button class="btn-warning">
@@ -34,11 +35,11 @@
                         </button> -->
                         <!-- Kita ubah button tersebut dengan menambahkan sintak untuk memanggil form edit dengan menggunakan Modal Bootstrap, kita ubah dan tambahkan sintak seperti berikut : -->
 
-                        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modalPetugasEdit{{$ptg->idpetugas}}">Edit
+                        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modalPetugasEdit{{$pt->idpetugas}}">Edit
                         </button>
                         
                         |
-                        <a href="petugas/hapus/{{$ptg->idpetugas}}" onclick="return confirm('Apakah Anda yakin ingin menghapus petugas?')">
+                        <a href="petugas/hapus/{{$pt->idpetugas}}" onclick="return confirm('Apakah Anda yakin ingin menghapus petugas?')">
                             <button class="btn-danger">
                                 Delete
                             </button>
@@ -77,16 +78,17 @@
 
                         <p>
                         <div class="form-group row">
-                            <label for="pengarang" class="col-sm-4 col-form-label">No HP</label>
+                            <label for="hp" class="col-sm-4 col-form-label">Hp</label>
                             <div class="col-sm-8">
-                                <input type="text" class="form-control" id="hp" name="hp" placeholder="Masukkan No Hp">
+                                <input type="text" class="form-control" id="hp" name="hp" placeholder="Masukkan Nomor Hp">
                             </div>
                         </div>
 
                         <p>
+                        <p>
                         <div class="modal-footer">
                             <button type="button" name="tutup" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
-                            <button type="submit" name="petugastambah" class="btn btn-success">Tambah</button>
+                            <button type="submit" name="petugastambah" class="btn btn-primary">Tambah</button>
                         </div>
                     </form>
                 </div>
@@ -96,35 +98,30 @@
     <!-- Akhir Modal tambah data petugas -->
 
     <!-- Awal Modal EDIT data Petugas -->
-    @foreach ($petugas as $index=>$ptg)
-    <div class="modal fade" id="modalPetugasEdit{{$ptg->idpetugas}}" tabindex="-1" role="dialog" aria-labelledby="modalPetugasEditLabel" aria-hidden="true">
+    @foreach ($petugas as $index=>$pt)
+        
+    
+    <div class="modal fade" id="modalPetugasEdit{{$pt->idpetugas}}" tabindex="-1" role="dialog" aria-labelledby="modalPetugasEditLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="modalPetugasEditLabel">Form Edit Data Petugas</h5>
                 </div>
                 <div class="modal-body">
-                    <form name="formpetugasedit" id="formpetugasedit" action="/petugas/edit/{{ $ptg->idpetugas}} " method="post" enctype="multipart/form-data">
+                    <form name="formpetugasedit" id="formpetugasedit" action="/petugas/edit/{{ $pt->idpetugas}} " method="post" enctype="multipart/form-data">
                         @csrf
                         {{ method_field('PUT') }}
                         <div class="form-group row">
                             <label for="idpetugas" class="col-sm-4 col-form-label">Nama Petugas</label>
                             <div class="col-sm-8">
-                                <input type="text" class="form-control" id="namapetugas" name="namapetugas" value="{{ $ptg->namapetugas}}">
+                                <input type="text" class="form-control" id="hp" name="hp" value="{{ $pt->hp}}">
                             </div>
                         </div>
-
                         <p>
-                        <div class="form-group row">
-                            <label for="hp" class="col-sm-4 col-form-label">No HP</label>
-                            <div class="col-sm-8">
-                                <input type="text" class="form-control" id="hp" name="hp" value="{{ $ptg->hp}}">
-                            </div>
-                        </div>
                         <p>
                         <div class="modal-footer">
                             <button type="button" name="tutup" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
-                            <button type="submit" name="petugastambah" class="btn btn-success">Edit</button>
+                            <button type="submit" name="petugastambah" class="btn btn-primary">Edit</button>
                         </div>
                     </form>
                 </div>

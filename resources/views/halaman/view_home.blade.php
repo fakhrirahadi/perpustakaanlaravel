@@ -1,32 +1,16 @@
 @extends('index')
 @section('title', 'Home')
+{{-- Home merupakan bagian (section) dari title, dimana section tersebut sebelumnya dipanggil pada halaman yang akan menambahkan kata Home pada title di browser --}}
 
 @section('isihalaman')
-    <h3>Pengertian perpustakaan menurut para ahli</h3>
-    <p>
-    <h4>Menurut Prof. Sulistyo Basuki</h4>
-    Perpustakaan adalah sebuah ruangan, bagian sebuah Gedung ataupun gedung itu sendiri yang digunakan untuk menyimpan buku
-    dan terbitan lainnya yang biasanya disimpan menurut tata susunan tertentu untuk digunakan pembaca, bukan untuk dijual.
-    Dalam pengertian buku dan terbitan lainnya termasuk di dalamnya semua bahan cetak, buku, majalah, laporan, pamflet,
-    prosiding, manuskrip (naskah), lembaran musik, berbagai karya musik, berbagai karya media audio visual seperti film,
-    slid ( slide), kaset, piringan hitam, bentuk mikro seperti mikrofilm, mikrofis, dan mikro buram ( micro opaque ).
-    Webster menyatakan bahwa perpustakaan merupakan kumpulan buku, manuskrip, dan bahan pustaka lainnya yang digunakan untuk
-    keperluan studi `atau bacaan, kenyamanan, atau kesenangan.
-    
-    <p>
-    <h4>Menurut Lasa HS</h4>
-    Menurut Lasa HS, Perpustakaan merupakan kumpulan atau bangunan fisik sebagai tempat buku dikumpulkan dan disusun
-    berdasarkan sistem tertentu atau keperluan pengguna.
-
-    <p>
-    <h4>Menurut Mudyana dan Royani</h4>
-    “Perpustakaan sekolah adalah sarana penunjang pendidikan di satu pihak sebagai pelestari ilmu pengetahuan, dan di lain
-    pihak sebagai sumber bahan pendidikan yang akan diwariskan kepada generasi yang lebih muda. Secara nyata perpustakaan
-    sekolah merupakan sarana untuk proses belajar dan mengajar bagi guru maupun bagi murid”.
-
-    <p>
-    <h4>Perpustakaan Menurut UU NO 43. THN. 2007</h4>
-    Perpustakaan adalah institusi yang mengumpulkan pengetahuan tercetak dan terekam, mengelolanya dengan cara khusus guna
-    memenuhi kebutuhan intelektualitas para penggunanya melalui berbagai cara interaksi pengetahuan.
-
+    <h3 style="text-align: center">Projek Akhir Pemrograman Web - A</h3>
+    <hr>
+    <h4>Anggota Kelompok:</h4>
+    <ol>
+        <li>Moh Nabil Maula Rhois        | NIM 205150407111005</li>
+        <li>Muhammad Fakhri Rahadi       | NIM 205150400111040</li>
+        <li>Brian Adriansyah Dwi Wahyudi | NIM 205150401111004</li>
+        <li>Muhammad Faiz Ramadhan       | NIM 205150401111008</li>
+        <li>Farhan Zaki Putra            | NIM 205150407111002</li>
+    </ol>
 @endsection

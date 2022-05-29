@@ -58,15 +58,21 @@
     </div>
 
     <div class="d-flex justify-content-between py-4 my-4 border-top">
-      <p>Projek Akhir Pemrograman Web.</p>
-      <p>Made By Kelompok 2.</p>
-      <p>© Footer made by Bootstrap V5.1 2022. All rights reserved.</p>      
-      <ul class="list-unstyled d-flex">
+      <p style="margin-left: 100px">Projek Akhir Pemrograman Web.</p>
+      <p style="padding-left: 100px">Made By Kelompok 2.</p>
+      <p>© Footer made by Bootstrap V5.1 2022. All rights reserved.</p>
+      {{-- <ul class="list-unstyled d-flex">
         <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
         <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
         <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
-      </ul>
+      </ul> --}}
     </div>
+
+    <div class="d-flex justify-content-between border-top"><p><a href="https://github.com/sungshot99/perpustakaanlaravel" target="_blank">
+      <img src="{{url('/assets/gambar/github.svg')}}" alt="GitHub" width="100" height="132">
+      </a></p>
+    </div>
+
   </footer>
 
 <!-- <div class="col-md-12">

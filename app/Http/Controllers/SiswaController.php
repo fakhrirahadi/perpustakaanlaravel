@@ -7,8 +7,8 @@ use Illuminate\Http\Request;
 //panggil model SiswaModel
 use App\Models\SiswaModel;
 
-class SiswaController extends Controller{
-
+class SiswaController extends Controller
+{
     //method untuk tampil data siswa
     public function siswatampil()
     {
@@ -39,9 +39,9 @@ class SiswaController extends Controller{
     }
 
     //method untuk hapus data siswa
-    public function siswahapus($idsiswa)
+    public function siswahapus($nis)
     {
-        $datasiswa=SiswaModel::find($idsiswa);
+        $datasiswa=SiswaModel::find($nis);
         $datasiswa->delete();
 
         return redirect()->back();
@@ -57,13 +57,11 @@ class SiswaController extends Controller{
             'hp' => 'required'
         ]);
         $idsiswa = SiswaModel::find($idsiswa);
-        $idsiswa->nis = $request->nis;
-        $idsiswa->namasiswa = $request->namasiswa;
-        $idsiswa->kelas = $request->kelas;
-        $idsiswa->hp = $request->hp;
+        $idsiswa->nis   = $request->nis;
+        $idsiswa->namasiswa      = $request->namasiswa;
+        $idsiswa->kelas  = $request->kelas;
+        $idsiswa->hp   = $request->hp;
         $idsiswa->save();
         return redirect()->back();
     }
 }
-
-

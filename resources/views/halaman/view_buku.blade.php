@@ -3,6 +3,7 @@
 
 @section('isihalaman')
     <h3><center>Daftar Buku Perpustakaan</center></h3>
+    <hr>
 
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalBukuTambah"> 
         Tambah Data Buku 
@@ -106,7 +107,7 @@
                         <p>
                         <div class="modal-footer">
                             <button type="button" name="tutup" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
-                            <button type="submit" name="bukutambah" class="btn btn-success">Tambah</button>
+                            <button type="submit" name="bukutambah" class="btn btn-primary">Tambah</button>
                         </div>
                     </form>
                 </div>
@@ -116,6 +117,9 @@
     <!-- Akhir Modal tambah data buku -->
 
     <!-- Awal Modal EDIT data Buku -->
+    @foreach ($buku as $index=>$bk)
+        
+    
     <div class="modal fade" id="modalBukuEdit{{$bk->idbuku}}" tabindex="-1" role="dialog" aria-labelledby="modalBukuEditLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -156,13 +160,14 @@
                         <p>
                         <div class="modal-footer">
                             <button type="button" name="tutup" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
-                            <button type="submit" name="bukutambah" class="btn btn-success">Edit</button>
+                            <button type="submit" name="bukutambah" class="btn btn-primary">Edit</button>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
+    @endforeach
 <!-- Akhir Modal EDIT data buku -->
     
 @endsection
