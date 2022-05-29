@@ -119,6 +119,7 @@
 
     @foreach ($pinjam as $index=>$p)
     <!-- Awal Modal EDIT data Peminjaman -->
+    @foreach ($pinjam as $index=>$p)
     <div class="modal fade" id="modalPinjamEdit{{$p->idpinjam}}" tabindex="-1" role="dialog" aria-labelledby="modalPinjamEditLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -195,6 +196,7 @@
             </div>
         </div>
     </div>
+    @endforeach
     <!-- Akhir Modal EDIT data Peminjaman -->
     @endforeach
 

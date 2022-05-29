@@ -50,6 +50,8 @@ Route::get('/peminjaman', 'PeminjamanController@bukutampil');
 
 // Oleh karena itu selanjutnya kita buatkan route baru pada routes/web.php
 Route::post('/buku/tambah','BukuController@bukutambah');
+Route::post('/petugas/tambah','PetugasController@petugastambah');
+Route::post('/siswa/tambah','SiswaController@siswatambah');
 
 // SISWA TAMBAH
 Route::post('/siswa/tambah','SiswaController@siswatambah');
@@ -59,9 +61,20 @@ Route::get('/siswa/hapus/{idsiswa}','SiswaController@siswahapus');
 
 // Selanjutnya kita buatkan route baru pada routes/web.php
 Route::get('/buku/hapus/{idbuku}','BukuController@bukuhapus');
+Route::get('/petugas/hapus/{idpetugas}','PetugasController@petugashapus');
 
 // Oleh karena itu selanjutnya kita buatkan route baru pada routes/web.php
 Route::put('/buku/edit/{idbuku}', 'BukuController@bukuedit');
+Route::put('/petugas/edit/{idpetugas}', 'PetugasController@petugasedit');
+Route::post('/siswa/tambah','SiswaController@siswatambah');
+
+// Selanjutnya kita buatkan route baru pada routes/web.php
+Route::get('/buku/hapus/{idbuku}','BukuController@bukuhapus');
+Route::post('/siswa/hapus/{idsiswa}','SiswaController@siswatambah');
+
+// Oleh karena itu selanjutnya kita buatkan route baru pada routes/web.php
+Route::put('/buku/edit/{idbuku}', 'BukuController@bukuedit');
+Route::post('/siswa/edit/{idsiswa}','SiswaController@siswatambah');
 
 // Pada sintak tersebut terdapat link yang mengarahkan ke alamat /pinjam, maka selanjutnya kita buat route baru pada file routes/web.php dengan sintak seperti berikut
 Route::get('/pinjam', 'PinjamController@pinjamtampil');
