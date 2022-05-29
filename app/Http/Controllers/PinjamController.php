@@ -30,6 +30,8 @@ class PinjamController extends Controller
         $datasiswa      = SiswaModel::all();
         $databuku       = BukuModel::all();
 
+        // dd($datapinjam->toArray());
+
         return view('halaman/view_pinjam',['pinjam'=>$datapinjam,'petugas'=>$datapetugas,'siswa'=>$datasiswa,'buku'=>$databuku]);
     }
 
