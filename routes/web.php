@@ -25,7 +25,7 @@ Route::get('/', function () {
 Route::get('/buku', 'BukuController@bukutampil');
 
 //Route untuk Data Siswa
-Route::get('/siswa', 'SiswaController@bukutampil');
+Route::get('/siswa', 'SiswaController@siswatampil');
 
 //Route untuk Data Petugas
 Route::get('/petugas', 'PetugasController@bukutampil');
@@ -35,12 +35,15 @@ Route::get('/peminjaman', 'PeminjamanController@bukutampil');
 
 // Oleh karena itu selanjutnya kita buatkan route baru pada routes/web.php
 Route::post('/buku/tambah','BukuController@bukutambah');
+Route::post('/siswa/tambah','SiswaController@siswatambah');
 
 // Selanjutnya kita buatkan route baru pada routes/web.php
 Route::get('/buku/hapus/{idbuku}','BukuController@bukuhapus');
+Route::post('/siswa/hapus/{idsiswa}','SiswaController@siswatambah');
 
 // Oleh karena itu selanjutnya kita buatkan route baru pada routes/web.php
 Route::put('/buku/edit/{idbuku}', 'BukuController@bukuedit');
+Route::post('/siswa/edit/{idsiswa}','SiswaController@siswatambah');
 
 // Pada sintak tersebut terdapat link yang mengarahkan ke alamat /pinjam, maka selanjutnya kita buat route baru pada file routes/web.php dengan sintak seperti berikut
 Route::get('/pinjam', 'PinjamController@pinjamtampil');
