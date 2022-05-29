@@ -74,7 +74,7 @@ Route::post('/siswa/hapus/{idsiswa}','SiswaController@siswatambah');
 
 // Oleh karena itu selanjutnya kita buatkan route baru pada routes/web.php
 Route::put('/buku/edit/{idbuku}', 'BukuController@bukuedit');
-Route::post('/siswa/edit/{idsiswa}','SiswaController@siswatambah');
+Route::put('/siswa/edit/{idsiswa}','SiswaController@siswatambah');
 
 // Pada sintak tersebut terdapat link yang mengarahkan ke alamat /pinjam, maka selanjutnya kita buat route baru pada file routes/web.php dengan sintak seperti berikut
 Route::get('/pinjam', 'PinjamController@pinjamtampil');
